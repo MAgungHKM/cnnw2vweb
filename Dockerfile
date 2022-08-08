@@ -8,5 +8,6 @@ COPY requirementNew.txt requirements.txt
 RUN pip install -r requirements.txt
 
 COPY . .
+RUN chmod +x main.py
 
-CMD [ "python3", "main.py" ]
+CMD [ "nohup", "python3", "main.py", "&" ]
